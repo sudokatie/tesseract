@@ -8,6 +8,6 @@ pub use camera::{Camera, Projection};
 pub use light::{Light, LightKind};
 pub use mesh::{Mesh, Vertex};
 pub use pbr::PbrMaterial;
-pub use texture::Texture;
+pub use texture::{Texture, TextureFormat};
 
 // Renderer and pipeline modules will be added later

@@ -1,4 +1,4 @@
-// Scene module - placeholder for now
-// Will contain: graph, node, loader
+mod graph;
 
+pub use graph::SceneGraph;
 pub use crate::ecs::transform_propagation_system;
