@@ -24,13 +24,16 @@ env_logger = "0.10"
 pollster = "0.3"
 thiserror = "1.0"
 
+[features]
+default = []
+window = []
+
 [dev-dependencies]
 criterion = "0.5"
 
-# Examples will be added later
-# [[example]]
-# name = "basic"
-# path = "examples/basic.rs"
+[[example]]
+name = "basic"
+path = "examples/basic.rs"
 
 # Benchmarks will be added later
 # [[bench]]
