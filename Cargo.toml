@@ -1,0 +1,38 @@
+[package]
+name = "tesseract"
+version = "0.1.0"
+edition = "2021"
+description = "A 3D game engine core with ECS, PBR rendering, and skeletal animation"
+license = "MIT"
+authors = ["Katie"]
+repository = "https://github.com/sudokatie/tesseract"
+keywords = ["game-engine", "3d", "graphics", "ecs", "wgpu"]
+categories = ["game-engines", "graphics", "rendering"]
+
+[dependencies]
+wgpu = "0.19"
+winit = "0.29"
+hecs = "0.10"
+glam = { version = "0.25", features = ["bytemuck"] }
+bytemuck = { version = "1.14", features = ["derive"] }
+image = "0.24"
+gltf = "1.4"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+log = "0.4"
+env_logger = "0.10"
+pollster = "0.3"
+thiserror = "1.0"
+
+[dev-dependencies]
+criterion = "0.5"
+
+# Examples will be added later
+# [[example]]
+# name = "basic"
+# path = "examples/basic.rs"
+
+# Benchmarks will be added later
+# [[bench]]
+# name = "benchmarks"
+# harness = false
