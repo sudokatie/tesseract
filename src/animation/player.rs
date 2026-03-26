@@ -80,7 +80,7 @@ impl AnimationPlayer {
             }
             LoopMode::Loop => {
                 if self.time >= duration {
-                    self.time = self.time % duration;
+                    self.time %= duration;
                 } else if self.time < 0.0 {
                     self.time = duration + (self.time % duration);
                 }

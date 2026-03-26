@@ -1,5 +1,4 @@
 use crate::math::Transform;
-use glam::{Quat, Vec3};
 
 /// A pose is a collection of bone transforms.
 pub type Pose = Vec<(usize, Transform)>;
@@ -30,6 +29,7 @@ pub fn blend_poses(a: &Pose, b: &Pose, factor: f32) -> Pose {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use glam::Quat;
 
     #[test]
     fn test_blend_at_zero() {

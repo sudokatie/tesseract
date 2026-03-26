@@ -44,12 +44,12 @@ impl World {
     }
 
     /// Get an immutable reference to a component.
-    pub fn get<T: Send + Sync + 'static>(&self, entity: Entity) -> Option<hecs::Ref<T>> {
+    pub fn get<T: Send + Sync + 'static>(&self, entity: Entity) -> Option<hecs::Ref<'_, T>> {
         self.inner.get::<&T>(entity).ok()
     }
 
     /// Get a mutable reference to a component.
-    pub fn get_mut<T: Send + Sync + 'static>(&mut self, entity: Entity) -> Option<hecs::RefMut<T>> {
+    pub fn get_mut<T: Send + Sync + 'static>(&mut self, entity: Entity) -> Option<hecs::RefMut<'_, T>> {
         self.inner.get::<&mut T>(entity).ok()
     }
 

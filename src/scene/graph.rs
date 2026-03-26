@@ -1,6 +1,4 @@
-use crate::ecs::{Children, GlobalTransform, Parent, World};
-use crate::math::Transform;
-use glam::Mat4;
+use crate::ecs::{Children, Parent, World};
 use hecs::Entity;
 
 /// Scene graph helper functions.
@@ -125,6 +123,7 @@ impl SceneGraph {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::math::Transform;
 
     #[test]
     fn test_add_child() {

@@ -1,5 +1,5 @@
 use crate::math::Transform;
-use glam::{Mat4, Vec3};
+use glam::Mat4;
 
 /// Camera projection type.
 #[derive(Clone, Copy, Debug)]
@@ -58,6 +58,8 @@ impl Camera {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::math::Transform;
+    use glam::{Mat4, Vec3};
 
     #[test]
     fn test_perspective_camera() {
