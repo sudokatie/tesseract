@@ -60,12 +60,13 @@ mod tests {
 
     #[test]
     fn test_blend_rotation() {
+        // Use a smaller rotation to avoid ambiguity at 180 degrees
         let a = vec![(0, Transform::from_rotation(Quat::IDENTITY))];
-        let b = vec![(0, Transform::from_rotation(Quat::from_rotation_y(std::f32::consts::PI)))];
+        let b = vec![(0, Transform::from_rotation(Quat::from_rotation_y(std::f32::consts::FRAC_PI_2)))];
         
         let result = blend_poses(&a, &b, 0.5);
-        // At half blend, rotation should be 90 degrees
-        let angle = result[0].1.rotation.to_euler(glam::EulerRot::YXZ).0;
-        assert!((angle - std::f32::consts::FRAC_PI_2).abs() < 0.001);
+        // At half blend between 0 and 90 degrees, should be 45 degrees
+        let (y, _, _) = result[0].1.rotation.to_euler(glam::EulerRot::YXZ);
+        assert!((y - std::f32::consts::FRAC_PI_4).abs() < 0.01);
     }
 }

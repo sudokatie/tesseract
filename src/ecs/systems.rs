@@ -39,8 +39,9 @@ pub fn transform_propagation_system(world: &mut World) {
     }
     
     // Process each root and its descendants
-    for (entity, transform) in roots {
-        propagate_recursive(world, entity, transform.to_matrix());
+    // Roots have no parent, so parent_matrix is identity
+    for (entity, _transform) in roots {
+        propagate_recursive(world, entity, Mat4::IDENTITY);
     }
 }
 
