@@ -1,5 +1,6 @@
 pub mod animation;
 pub mod asset;
+pub mod audio;
 pub mod ecs;
 pub mod engine;
 pub mod math;
