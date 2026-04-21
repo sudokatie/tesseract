@@ -140,10 +140,10 @@ Core engine complete. Rendering pipeline (wgpu integration) in progress.
 - Scene graph utilities
 - Headless engine loop
 
-**In Progress:**
+**Also Implemented:**
 - Render pipeline (wgpu)
-- WGSL shaders
-- Shadow mapping
+- WGSL shaders (Cook-Torrance BRDF, shadow)
+- Cascaded shadow mapping
 
 ## License
 
