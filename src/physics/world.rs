@@ -163,7 +163,7 @@ impl PhysicsWorld {
         pos_b: Vec3,
         body_b: &RigidBody,
     ) -> bool {
-        use crate::physics::{CollisionShape, Sphere, BoxShape};
+        use crate::physics::CollisionShape;
 
         match (&body_a.shape, &body_b.shape) {
             (CollisionShape::Sphere(a), CollisionShape::Sphere(b)) => {

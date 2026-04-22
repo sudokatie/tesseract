@@ -371,7 +371,6 @@ impl Renderer {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::render::Projection;
 
     #[test]
     fn test_camera_uniform_size() {

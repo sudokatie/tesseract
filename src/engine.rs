@@ -153,7 +153,7 @@ mod tests {
     #[test]
     fn test_headless_run() {
         let mut engine = Engine::with_default_config();
-        let cube = engine.assets.insert_mesh(Mesh::cube());
+        _cube = engine.assets.insert_mesh(Mesh::cube());
 
         engine.world.spawn((Transform::default(),));
 
